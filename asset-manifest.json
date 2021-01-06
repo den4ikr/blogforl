@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/blogforl/static/css/main.14c9de58.chunk.css",
+    "main.js": "/blogforl/static/js/main.aa0b6fc8.chunk.js",
+    "main.js.map": "/blogforl/static/js/main.aa0b6fc8.chunk.js.map",
+    "runtime-main.js": "/blogforl/static/js/runtime-main.19082389.js",
+    "runtime-main.js.map": "/blogforl/static/js/runtime-main.19082389.js.map",
+    "static/js/2.0df237c4.chunk.js": "/blogforl/static/js/2.0df237c4.chunk.js",
+    "static/js/2.0df237c4.chunk.js.map": "/blogforl/static/js/2.0df237c4.chunk.js.map",
+    "static/js/3.32f9777d.chunk.js": "/blogforl/static/js/3.32f9777d.chunk.js",
+    "static/js/3.32f9777d.chunk.js.map": "/blogforl/static/js/3.32f9777d.chunk.js.map",
+    "index.html": "/blogforl/index.html",
+    "static/css/main.14c9de58.chunk.css.map": "/blogforl/static/css/main.14c9de58.chunk.css.map",
+    "static/js/2.0df237c4.chunk.js.LICENSE.txt": "/blogforl/static/js/2.0df237c4.chunk.js.LICENSE.txt",
+    "static/media/Blocks-1s-200px.b67ad5ee.svg": "/blogforl/static/media/Blocks-1s-200px.b67ad5ee.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.19082389.js",
+    "static/js/2.0df237c4.chunk.js",
+    "static/css/main.14c9de58.chunk.css",
+    "static/js/main.aa0b6fc8.chunk.js"
+  ]
+}
