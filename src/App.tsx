@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
+import { Route } from 'react-router-dom';
 import './App.css';
+import Header from './components/Header/Header';
+import PostBlockContainer from './components/PostBlock/PostBlockContainer';
+import PostsContainer from './components/Posts/PostsContainer';
+import { AppStateType } from './redux/redux-store';
+import { initiliseApp } from "./redux/app-reducer";
+import { useEffect } from 'react';
+import { connect } from 'react-redux';
+import Preloader from './components/Preloader/Preloader';
 
-function App() {
+type PropsType = {
+  initilised: boolean,
+  initiliseApp: () => void,
+}
+
+const App: React.FunctionComponent <PropsType> = (props) => {
+
+  useEffect ( () => {
+    props.initiliseApp ()
+  }, [] )
+
+  if (!props.initilised) {
+    return (
+      <Preloader />
+    )
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Header />
+      <div className = "container" >
+        <Route exact path = "/" render = { () => <PostsContainer /> } />
+        <Route exact path = "/postblock/:postId?" render = { () => <PostBlockContainer /> } />
+      </div>
     </div>
   );
 }
 
-export default App;
+let mapStateToProps = (state: AppStateType) => {
+  return {
+    initilised: state.app.initilised,
+  }
+}
+
+export default connect (mapStateToProps, {initiliseApp})(App);
